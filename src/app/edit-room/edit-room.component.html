@@ -20,7 +20,7 @@
     <td>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Prédio</mat-label>
-        <mat-select [(ngModel)]="buildings" name="buildings">
+        <mat-select [(ngModel)]="room.buildingId" name="buildings">
           <mat-option *ngFor="let building of buildings" [value]="building.id">
             {{building.name}}
           </mat-option>
