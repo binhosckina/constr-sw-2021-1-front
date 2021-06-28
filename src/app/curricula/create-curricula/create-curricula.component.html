@@ -1,0 +1,10 @@
+<h1>Criar currículo</h1>
+
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Nome</mat-label>
+  <input matInput [(ngModel)]="curricula.name">
+</mat-form-field>
+
+<button mat-raised-button class="float" color="primary" (click)="save()">
+  Salvar
+</button>

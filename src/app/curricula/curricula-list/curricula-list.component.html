@@ -1,0 +1,27 @@
+<div>
+  <mat-icon style="float: left;">business</mat-icon>
+  <h1>Currículos</h1>
+  <h2>Lista de currículos</h2>
+</div>
+
+<mat-list>
+  <mat-list-item *ngFor="let curricula of curriculas" id="{{curricula.id}}" style="height: fit-content; padding: 10px;">
+    <mat-card>
+      <mat-card-header [routerLink]="['/curricula', curricula.id]">
+        <mat-card-title>{{curricula.name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-button [routerLink]="['/edit-curricula', curricula.id]">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-button (click)="delete(curricula.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-list-item>
+</mat-list>
+
+<button mat-raised-button class="float" color="primary" style="float: right;" routerLink="/create-curricula">
+  Criar
+</button>

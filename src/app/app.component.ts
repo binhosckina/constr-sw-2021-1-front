@@ -13,7 +13,7 @@ export class AppComponent {
       id: 1,
       name: 'Prédios e Salas',
       icon: 'business',
-      path: 'building'
+      path: ''
     },
     {
       id: 2,
@@ -55,7 +55,7 @@ export class AppComponent {
       id: 8,
       name: 'Currículos',
       icon: 'contact_page',
-      path: ''
+      path: 'curricula'
     }
   ];
 }

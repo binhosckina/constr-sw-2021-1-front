@@ -1,0 +1,24 @@
+<h1>Skill</h1>
+
+<table>
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <input matInput readonly [(ngModel)]="skill.description">
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Tipo</mat-label>
+        <input matInput readonly [(ngModel)]="skill.type">
+      </mat-form-field>
+    </td>
+  </tr>
+</table>
+
+<button mat-raised-button class="float" color="primary" [routerLink]="['/edit-skill', skill.id]">
+  Editar
+</button>
