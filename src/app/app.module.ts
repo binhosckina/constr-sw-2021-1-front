@@ -15,8 +15,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { PrediosComponent } from './predios/predios.component';
 import { PredioDetalheComponent } from './predio-detalhe/predio-detalhe.component';
 import { CoreModule } from './core/core.module'
@@ -30,8 +28,6 @@ import { CreateRoomComponent } from './create-room/create-room.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
-    SidenavComponent,
     PrediosComponent,
     PredioDetalheComponent,
     CreateBuildingComponent,
