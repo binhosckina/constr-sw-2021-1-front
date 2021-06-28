@@ -1,0 +1,50 @@
+<h1>Editar sala</h1>
+
+<table class="example-full-width">
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Número da sala</mat-label>
+        <input matInput [(ngModel)]="room.number">
+      </mat-form-field>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Capacidade Máxima</mat-label>
+        <input matInput [(ngModel)]="room.maxcapacity">
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Prédio</mat-label>
+        <mat-select [(ngModel)]="buildings" name="buildings">
+          <mat-option *ngFor="let building of buildings" [value]="building.id">
+            {{building.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Tipo</mat-label>
+        <input matInput [(ngModel)]="room.type">
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)]="room.description">
+      </mat-form-field>
+    </td>
+  </tr>
+</table>
+
+<button mat-raised-button class="float" color="primary" (click)="save()">
+  Salvar
+</button>

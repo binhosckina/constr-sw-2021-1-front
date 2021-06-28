@@ -1,0 +1,50 @@
+<h1>{{building.name}}</h1>
+
+<table class="example-full-width" cellspacing="0"><tr>
+  <td><mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Capacidade Máxima</mat-label>
+    <input matInput disabled value="{{building.maxcapacity}}">
+  </mat-form-field></td>
+  <td><mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Andar(es)</mat-label>
+    <input matInput disabled value="{{building.floors}}">
+  </mat-form-field></td>
+</tr></table>
+
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Descrição</mat-label>
+  <input matInput disabled value="{{building.description}}">
+</mat-form-field>
+
+<h2>Salas</h2>
+
+<mat-list>
+  <mat-list-item *ngFor="let room of rooms" id="{{room.id}}" style="height: fit-content; padding: 10px;">
+    <mat-card>
+      <mat-card-header [routerLink]="['/room', room.id]">
+        <mat-card-title>{{room.number}}</mat-card-title>
+        <mat-card-subtitle>Descrição: {{room.description}}</mat-card-subtitle>
+        <mat-card-subtitle>Capacidade Máxima: {{room.maxcapacity}}</mat-card-subtitle>
+        <mat-card-subtitle>Tipo: {{room.type}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-button [routerLink]="['/edit-room', room.id]">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-button (click)="deleteRoom(room.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-list-item>
+</mat-list>
+
+<div class="float">
+  <button mat-raised-button [routerLink]="['/create-room']">
+    Adicionar sala
+  </button>
+
+  <button mat-raised-button style="margin-left: 10px;" color="primary" [routerLink]="['/edit-building', building.id]">
+    Editar
+  </button>
+</div>

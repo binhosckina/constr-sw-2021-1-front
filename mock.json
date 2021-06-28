@@ -1,0 +1,296 @@
+{
+  "building": [
+    {
+      "id": 1,
+      "name": "Prédio 1",
+      "maxcapacity": 100,
+      "floors": 1,
+      "description": "Lorem ipsum 1 edited",
+      "rooms": [
+        {
+          "id": 1,
+          "numero": 1,
+          "maxcapacity": 10,
+          "buildingId": 1,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "id": 2,
+          "numero": 2,
+          "maxcapacity": 20,
+          "buildingId": 1,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "id": 3,
+          "numero": 3,
+          "maxcapacity": 30,
+          "buildingId": 1,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "id": 4,
+          "numero": 4,
+          "maxcapacity": 40,
+          "buildingId": 1,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "id": 5,
+          "numero": 5,
+          "maxcapacity": 50,
+          "buildingId": 1,
+          "tipo": "Sala de Aula"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Prédio 2",
+      "maxcapacity": 200,
+      "floors": 2,
+      "description": "Lorem ipsum 2",
+      "salas": [
+        {
+          "id": 6,
+          "numero": 6,
+          "maxcapacity": 10,
+          "buildingId": 2,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "id": 7,
+          "numero": 7,
+          "maxcapacity": 20,
+          "buildingId": 2,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "id": 8,
+          "numero": 8,
+          "maxcapacity": 30,
+          "buildingId": 2,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "id": 9,
+          "numero": 9,
+          "maxcapacity": 40,
+          "buildingId": 2,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "id": 10,
+          "numero": 10,
+          "maxcapacity": 50,
+          "buildingId": 2,
+          "tipo": "Sala de Aula"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Prédio 3",
+      "maxcapacity": 300,
+      "floors": 3,
+      "description": "Lorem ipsum 3",
+      "salas": [
+        {
+          "numero": 11,
+          "maxcapacity": 10,
+          "predio": 1,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 12,
+          "maxcapacity": 20,
+          "predio": 2,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 13,
+          "maxcapacity": 30,
+          "predio": 3,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 14,
+          "maxcapacity": 40,
+          "predio": 4,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 15,
+          "maxcapacity": 50,
+          "predio": 5,
+          "tipo": "Sala de Aula"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Prédio 4",
+      "maxcapacity": 400,
+      "floors": 4,
+      "description": "Lorem ipsum 4",
+      "salas": [
+        {
+          "numero": 16,
+          "maxcapacity": 10,
+          "predio": 1,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 17,
+          "maxcapacity": 20,
+          "predio": 2,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 18,
+          "maxcapacity": 30,
+          "predio": 3,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 19,
+          "maxcapacity": 40,
+          "predio": 4,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 20,
+          "maxcapacity": 50,
+          "predio": 5,
+          "tipo": "Sala de Aula"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Prédio 5",
+      "maxcapacity": 500,
+      "floors": 5,
+      "description": "Lorem ipsum 5",
+      "salas": [
+        {
+          "numero": 21,
+          "maxcapacity": 10,
+          "predio": 1,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 22,
+          "maxcapacity": 20,
+          "predio": 2,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 23,
+          "maxcapacity": 30,
+          "predio": 3,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 24,
+          "maxcapacity": 40,
+          "predio": 4,
+          "tipo": "Sala de Aula"
+        },
+        {
+          "numero": 25,
+          "maxcapacity": 50,
+          "predio": 5,
+          "tipo": "Sala de Aula"
+        }
+      ]
+    },
+    {
+      "name": "Teste 4",
+      "maxcapacity": "1",
+      "floors": "2",
+      "description": "123",
+      "id": 6
+    }
+  ],
+  "room": [
+    {
+      "id": 1,
+      "number": 1,
+      "maxcapacity": 10,
+      "buildingId": 1,
+      "type": "Sala de Aula"
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "maxcapacity": 20,
+      "buildingId": 1,
+      "type": "Sala de Aula"
+    },
+    {
+      "id": 3,
+      "number": 3,
+      "maxcapacity": 30,
+      "buildingId": 1,
+      "type": "Sala de Aula"
+    },
+    {
+      "id": 4,
+      "number": 4,
+      "maxcapacity": 40,
+      "buildingId": 1,
+      "type": "Sala de Aula"
+    },
+    {
+      "id": 5,
+      "number": 5,
+      "maxcapacity": 50,
+      "buildingId": 1,
+      "type": "Sala de Aula"
+    },
+    {
+      "id": 6,
+      "number": 6,
+      "maxcapacity": 10,
+      "buildingId": 2,
+      "type": "Sala de Aula"
+    },
+    {
+      "id": 7,
+      "number": 7,
+      "maxcapacity": 20,
+      "buildingId": 2,
+      "type": "Sala de Aula"
+    },
+    {
+      "id": 8,
+      "number": 8,
+      "maxcapacity": 30,
+      "buildingId": 2,
+      "type": "Sala de Aula"
+    },
+    {
+      "id": 9,
+      "number": 9,
+      "maxcapacity": 40,
+      "buildingId": 2,
+      "type": "Sala de Aula"
+    },
+    {
+      "id": 10,
+      "number": 10,
+      "maxcapacity": 50,
+      "buildingId": 2,
+      "type": "Sala de Aula"
+    },
+    {
+      "buildingId": 6,
+      "number": "Sala teste",
+      "maxcapacity": "10",
+      "type": "Sala de aula",
+      "description": "Teste teste",
+      "id": 11
+    }
+  ]
+}

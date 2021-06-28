@@ -1,0 +1,40 @@
+<h1>Sala {{room.number}}</h1>
+
+<table class="example-full-width">
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Capacidade Máxima</mat-label>
+        <input matInput [(ngModel)]="room.maxcapacity">
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Prédio</mat-label>
+        <input matInput type="text" [(ngModel)]="room.building.name">
+      </mat-form-field>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Tipo</mat-label>
+        <input matInput [(ngModel)]="room.type">
+      </mat-form-field>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)]="room.description">
+      </mat-form-field>
+    </td>
+  </tr>
+</table>
+
+<button mat-raised-button class="float" color="primary" [routerLink]="['/edit-room', room.id]">
+  Editar
+</button>
