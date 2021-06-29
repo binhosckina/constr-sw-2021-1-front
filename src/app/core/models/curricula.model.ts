@@ -4,5 +4,5 @@ export interface Curricula {
   id: string;
   name: string;
   courses: any;
-  skill: Skill[];
+  skills: Skill[];
 }

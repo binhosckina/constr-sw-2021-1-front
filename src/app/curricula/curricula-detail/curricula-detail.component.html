@@ -1,4 +1,4 @@
-<h1>Currículo {{curricula.name}}</h1>
+<h1>Currículo: {{curricula.name}}</h1>
 
 <mat-list>
   <mat-list-item *ngFor="let skill of skills" id="{{skill.id}}" style="height: fit-content; padding: 10px;">
@@ -20,11 +20,11 @@
 </mat-list>
 
 <div class="float">
-  <button mat-raised-button [routerLink]="['/create-skill', curricula.id]">
+  <button mat-raised-button (click)="navigateToCreateSkill()">
     Adicionar skill
   </button>
 
-  <button mat-raised-button style="margin-left: 10px;" color="primary" [routerLink]="['/edit-curricula', curricula.id]">
+  <button mat-raised-button style="margin-left: 10px;" color="primary" (click)="navigateToEdit()">
     Editar
   </button>
 </div>

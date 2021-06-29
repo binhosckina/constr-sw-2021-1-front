@@ -13,7 +13,14 @@
     <td>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Tipo</mat-label>
-        <input matInput [(ngModel)]="skill.type">
+        <mat-select [(ngModel)]="skill.type" name="tipo">
+          <mat-option value="hard">
+            Hard
+          </mat-option>
+          <mat-option value="soft">
+            Soft
+          </mat-option>
+        </mat-select>
       </mat-form-field>
     </td>
   </tr>

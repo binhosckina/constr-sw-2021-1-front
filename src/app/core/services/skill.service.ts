@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Skill } from '../models/skill.model';
 import { ApiService } from './api.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class SkillService {
-  readonly path = 'skill';
+  readonly path = environment.skill_path;
 
   constructor(private api: ApiService) { }
 
@@ -21,8 +22,8 @@ export class SkillService {
     return this.api.post(this.path, skill)
   }
 
-  put(id: string, skill: Skill): Observable<Skill> {
-    return this.api.put(`${this.path}/${id}`, skill)
+  patch(skill: Skill): Observable<Skill> {
+    return this.api.patch(`${this.path}`, skill)
   }
 
   delete(id: string): Observable<Skill> {

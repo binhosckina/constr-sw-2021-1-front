@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Curricula } from '../models/curricula.model';
 import { ApiService } from './api.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class CurriculaService {
-  readonly path = 'curricula';
+  readonly path = environment.curricula_path;
 
   constructor(private api: ApiService) { }
 
@@ -17,12 +18,16 @@ export class CurriculaService {
     return this.api.get(`${this.path}/${id}`)
   }
 
+  getSkill(id: string): Observable<Curricula> {
+    return this.api.get(`${this.path}/${id}/${environment.skill_path}`)
+  }
+
   post(curricula: Curricula): Observable<Curricula> {
     return this.api.post(this.path, curricula)
   }
 
-  put(id: string, curricula: Curricula): Observable<Curricula> {
-    return this.api.put(`${this.path}/${id}`, curricula)
+  patch(curricula: Curricula): Observable<Curricula> {
+    return this.api.patch(`${this.path}`, curricula)
   }
 
   delete(id: string): Observable<Curricula> {

@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+      "target": "http://ec2-3-16-49-11.us-east-2.compute.amazonaws.com/api/v1",
+      "secure": false,
+      "logLevel": "debug"
+  }
+}

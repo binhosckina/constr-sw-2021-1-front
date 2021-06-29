@@ -32,7 +32,7 @@ export class EditSkillComponent implements OnInit {
   }
 
   save() {
-    this.service.put(this.id, this.skill).subscribe(
+    this.service.patch(this.skill).subscribe(
       () => {
         this.router.navigate(['/skill', this.id])
       }

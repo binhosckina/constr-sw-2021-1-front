@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Curricula } from 'src/app/core/models/curricula.model';
 import { Skill } from 'src/app/core/models/skill.model';
 import { CurriculaService } from 'src/app/core/services/curricula.service';
@@ -18,7 +18,8 @@ export class CurriculaDetailComponent implements OnInit {
   constructor(
     private service: CurriculaService,
     private skillService: SkillService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -41,5 +42,13 @@ export class CurriculaDetailComponent implements OnInit {
         this.skills = data.filter(s => s.curriculumId == this.id)
       }
     )
+  }
+
+  navigateToEdit() {
+    this.router.navigate(['/edit-curricula', this.id])
+  }
+
+  navigateToCreateSkill() {
+    this.router.navigate(['/create-skill', this.id])
   }
 }
