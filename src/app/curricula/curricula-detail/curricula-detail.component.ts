@@ -25,23 +25,28 @@ export class CurriculaDetailComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id')
     this.get(this.id)
-    this.getSkills()
   }
 
   get(id: string) {
+    this.skills = [] as Skill[]
     this.service.get(id).subscribe(
-      data => {
-        this.curricula = data
+      curricula => {
+        this.curricula = curricula
+        curricula.skills.forEach(skillId => {
+          this.skillService.get(skillId).subscribe(
+            skill => {
+              this.skills.push(skill[0])
+            }
+          )
+        })
       }
     )
   }
 
-  getSkills() {
-    this.skillService.getAll().subscribe(
-      data => {
-        this.skills = data.filter(s => s.curriculumId == this.id)
-      }
-    )
+  delete(skillId: string) {
+    this.curricula.skills = this.curricula.skills.filter(s => s != skillId)
+    this.service.patch(this.id, this.curricula).subscribe()
+    this.get(this.id)
   }
 
   navigateToEdit() {

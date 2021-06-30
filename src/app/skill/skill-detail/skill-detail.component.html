@@ -13,7 +13,7 @@
     <td>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Tipo</mat-label>
-        <input matInput readonly [(ngModel)]="skill.type">
+        <input matInput readonly value="{{skill.type == 'hard' ? 'Hard' : 'Soft'}}">
       </mat-form-field>
     </td>
   </tr>

@@ -38,10 +38,9 @@ export class CreateSkillComponent implements OnInit {
   save() {
     this.skill.curriculumId = this.curriculaId
     this.service.post(this.skill).subscribe(
-      () => {
-        console.log(this.curricula)
-        this.curricula.skills.push(this.skill)
-        this.curriculaService.patch(this.curricula).subscribe(
+      data => {
+        this.curricula.skills.push(data.id)
+        this.curriculaService.patch(this.curriculaId, this.curricula).subscribe(
           () => {
             this.router.navigate(['/curricula', this.curriculaId])
           }

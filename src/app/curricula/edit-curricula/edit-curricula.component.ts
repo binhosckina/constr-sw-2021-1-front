@@ -32,7 +32,7 @@ export class EditCurriculaComponent implements OnInit {
   }
 
   save() {
-    this.service.patch(this.curricula).subscribe(
+    this.service.patch(this.id, this.curricula).subscribe(
       () => {
         this.router.navigate(['/curricula', this.id])
       }

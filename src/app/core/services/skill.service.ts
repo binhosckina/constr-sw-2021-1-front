@@ -22,8 +22,8 @@ export class SkillService {
     return this.api.post(this.path, skill)
   }
 
-  patch(skill: Skill): Observable<Skill> {
-    return this.api.patch(`${this.path}`, skill)
+  patch(id: string, skill: Skill): Observable<Skill> {
+    return this.api.patch(`${this.path}/${id}`, skill)
   }
 
   delete(id: string): Observable<Skill> {

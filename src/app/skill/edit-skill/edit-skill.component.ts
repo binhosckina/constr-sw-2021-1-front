@@ -24,15 +24,17 @@ export class EditSkillComponent implements OnInit {
   }
 
   get(id: string) {
+    console.log('oi')
     this.service.get(id).subscribe(
       data => {
-        this.skill = data
+        console.log(data)
+        this.skill = data[0]
       }
     )
   }
 
   save() {
-    this.service.patch(this.skill).subscribe(
+    this.service.patch(this.id, this.skill).subscribe(
       () => {
         this.router.navigate(['/skill', this.id])
       }

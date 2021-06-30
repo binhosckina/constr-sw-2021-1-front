@@ -26,8 +26,12 @@ export class CurriculaService {
     return this.api.post(this.path, curricula)
   }
 
-  patch(curricula: Curricula): Observable<Curricula> {
-    return this.api.patch(`${this.path}`, curricula)
+  patch(id: string, curricula: Curricula): Observable<Curricula> {
+    return this.api.patch(`${this.path}/${id}`, curricula)
+  }
+
+  put(id: string, curricula: Curricula): Observable<Curricula> {
+    return this.api.put(`${this.path}/${id}`, curricula)
   }
 
   delete(id: string): Observable<Curricula> {

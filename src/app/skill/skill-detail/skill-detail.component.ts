@@ -25,7 +25,7 @@ export class SkillDetailComponent implements OnInit {
   get(id: string) {
     this.service.get(id).subscribe(
       data => {
-        this.skill = data
+        this.skill = data[0]
       }
     )
   }
